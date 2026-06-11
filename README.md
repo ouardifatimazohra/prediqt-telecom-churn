@@ -94,16 +94,17 @@ curl -X POST http://localhost:8000/predict \
 - **Target :** Binary churn prediction (Yes / No)
 - **Domain :** Moroccan telecom market adaptation
 
+
 ## Model Performance
 
-| Metric | Score |
-|--------|-------|
-| Accuracy | 🔄 In progress |
-| F1-Score | 🔄 In progress |
-| ROC-AUC | 🔄 In progress |
-| Precision | 🔄 In progress |
+| Metric    | Score  |
+|-----------|--------|
+| Accuracy  | 79.49% |
+| F1-Score  | 58.89% |
+| ROC-AUC   | 83.06% |
+| Precision | 62.92% |
 
-*Metrics will be updated as training pipeline is completed.*
+*Baseline XGBoost model — tracked with MLflow.*
 
 ## Roadmap
 
