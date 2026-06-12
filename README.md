@@ -87,6 +87,25 @@ curl -X POST http://localhost:8000/predict \
   -d '{"tenure": 12, "monthly_charges": 65.5, "contract": "Month-to-month"}'
 ```
 
+## API Endpoints
+
+| Method | Endpoint | Description                 |
+|--------|----------|-----------------------------|
+| GET    | `/`      | API status                  |
+| GET    | `/health`| Health check + model status |
+| POST   |`/predict`| Real-time churn prediction  |
+
+**Example response:**
+```json
+{
+  "churn_prediction": 0,
+  "churn_probability": 0.0644,
+  "risk_level": "low"
+}
+```
+
+Interactive docs available at `/docs` (Swagger UI).
+
 ## Dataset
 
 - **Source :** [IBM Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
@@ -110,9 +129,9 @@ curl -X POST http://localhost:8000/predict \
 
 - [x] Project structure & architecture design
 - [ ] Kafka ingestion pipeline
-- [ ] Feature engineering module
-- [ ] XGBoost training with MLflow tracking
-- [ ] FastAPI serving endpoint
+- [x] Feature engineering module
+- [x] XGBoost training with MLflow tracking
+- [x] FastAPI serving endpoint
 - [ ] Docker containerization
 - [ ] CI/CD with GitHub Actions
 - [ ] Grafana monitoring dashboard
