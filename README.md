@@ -7,6 +7,7 @@
 ![Kafka](https://img.shields.io/badge/Kafka-Streaming-231F20?style=flat-square&logo=apachekafka)
 ![Airflow](https://img.shields.io/badge/Airflow-Orchestration-017CEE?style=flat-square&logo=apacheairflow)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![CI](https://github.com/ouardifatimazohra/prediqt-telecom-churn/actions/workflows/ci.yml/badge.svg)
 
 > End-to-end MLOps platform for real-time telecom customer churn prediction.  
 > Built with production-grade architecture : streaming ingestion, automated training pipeline, REST API serving, and live monitoring.
@@ -147,7 +148,7 @@ curl http://localhost:8000/health
 - [x] XGBoost training with MLflow tracking
 - [x] FastAPI serving endpoint
 - [x] Docker containerization
-- [ ] CI/CD with GitHub Actions
+- [x] CI/CD with GitHub Actions
 - [ ] Grafana monitoring dashboard
 
 ## Author
