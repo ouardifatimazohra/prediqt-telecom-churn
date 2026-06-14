@@ -106,6 +106,20 @@ curl -X POST http://localhost:8000/predict \
 
 Interactive docs available at `/docs` (Swagger UI).
 
+
+## Running with Docker
+
+```bash
+# Build the image
+docker build -t prediqt-api .
+
+# Run the container
+docker run -d -p 8000:8000 --name prediqt-container prediqt-api
+
+# Check health
+curl http://localhost:8000/health
+```
+
 ## Dataset
 
 - **Source :** [IBM Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
@@ -132,7 +146,7 @@ Interactive docs available at `/docs` (Swagger UI).
 - [x] Feature engineering module
 - [x] XGBoost training with MLflow tracking
 - [x] FastAPI serving endpoint
-- [ ] Docker containerization
+- [x] Docker containerization
 - [ ] CI/CD with GitHub Actions
 - [ ] Grafana monitoring dashboard
 
