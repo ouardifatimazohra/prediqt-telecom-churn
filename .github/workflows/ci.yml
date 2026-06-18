@@ -36,4 +36,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t prediqt-api .
+        run: |
+          docker build \
+            --build-arg KAGGLE_USERNAME=${{ secrets.KAGGLE_USERNAME }} \
+            --build-arg KAGGLE_KEY=${{ secrets.KAGGLE_KEY }} \
+            -t prediqt-api .

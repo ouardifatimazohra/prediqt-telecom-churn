@@ -17,7 +17,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY src/ ./src/
-COPY data/raw/ ./data/raw/
+
+ARG KAGGLE_USERNAME
+ARG KAGGLE_KEY
+RUN mkdir -p /root/.kaggle && \
+    echo "{\"username\":\"${KAGGLE_USERNAME}\",\"key\":\"${KAGGLE_KEY}\"}" > /root/.kaggle/kaggle.json && \
+    chmod 600 /root/.kaggle/kaggle.json
+RUN mkdir -p data/raw && \
+    kaggle datasets download -d blastchar/telco-customer-churn -p data/raw --unzip
 RUN mkdir -p data/models && python src/training/save_model.py
 
 
