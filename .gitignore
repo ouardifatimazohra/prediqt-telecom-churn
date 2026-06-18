@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+mlflow.db
+mlruns/
+data/models/
+data/raw/
+*.pkl
+*.db

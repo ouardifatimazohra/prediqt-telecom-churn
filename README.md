@@ -143,7 +143,7 @@ curl http://localhost:8000/health
 ## Roadmap
 
 - [x] Project structure & architecture design
-- [ ] Kafka ingestion pipeline
+- [x] Kafka ingestion pipeline
 - [x] Feature engineering module
 - [x] XGBoost training with MLflow tracking
 - [x] FastAPI serving endpoint
