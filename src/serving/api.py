@@ -4,6 +4,8 @@ import joblib
 import pandas as pd
 import logging
 import os
+from prometheus_fastapi_instrumentator import Instrumentator
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -13,6 +15,8 @@ app = FastAPI(
     description="Telecom Churn Prediction API — MLOps Platform",
     version="1.0.0"
 )
+
+Instrumentator().instrument(app).expose(app)
 
 # Load model at startup
 MODEL_PATH = "data/models/xgboost_churn_model.pkl"
