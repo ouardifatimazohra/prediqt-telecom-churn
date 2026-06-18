@@ -149,7 +149,7 @@ curl http://localhost:8000/health
 - [x] FastAPI serving endpoint
 - [x] Docker containerization
 - [x] CI/CD with GitHub Actions
-- [ ] Grafana monitoring dashboard
+- [x] Grafana monitoring dashboard
 
 ## Author
 
