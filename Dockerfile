@@ -17,7 +17,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY src/ ./src/
-COPY data/models/ ./data/models/
+COPY data/raw/ ./data/raw/
+RUN mkdir -p data/models && python src/training/save_model.py
+
 
 # Expose API port
 EXPOSE 8000
